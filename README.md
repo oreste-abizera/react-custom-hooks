@@ -48,3 +48,22 @@ custom react hooks for better performance and faster development
     );
   }
   ```
+
+  - **useClickOutside**:
+    [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useClickOutside/useClickOutside.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useClickOutside.md)
+
+    ```jsx
+    import useClickOutside from "./useClickOutside";
+    export default function App() {
+      const ref = useRef();
+      const handleClickOutside = () => {
+        console.log("Clicked outside");
+      };
+      useClickOutside(ref, handleClickOutside);
+      return (
+        <div ref={ref}>
+          <p>Click Outside me</p>
+        </div>
+      );
+    }
+    ```
