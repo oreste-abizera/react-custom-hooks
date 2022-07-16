@@ -103,3 +103,25 @@ custom react hooks for better performance and faster development
         }
         ```
     ````
+
+    - **usePagination**:
+      [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/usePagination/usePagination.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/usePagination.md)
+
+      ```jsx
+      import usePagination from "./usePagination";
+
+      export default function App() {
+        const { currentPage, totalPages, setCurrentPage } = usePagination(
+          1,
+          10
+        );
+        return (
+          <div>
+            <p>{`${currentPage} of ${totalPages}`}</p>
+            <button onClick={() => setCurrentPage(currentPage + 1)}>
+              Next
+            </button>
+          </div>
+        );
+      }
+      ```
