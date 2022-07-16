@@ -3,7 +3,7 @@
 custom react hooks for better performance and faster development
 
 - **useFetch**:
-  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useFetch/useFetch.js)
+  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useFetch/useFetch.jsx)
   /
   [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useFetch.md)
 
@@ -31,4 +31,20 @@ custom react hooks for better performance and faster development
       </div>
     );
   };
+  ```
+
+- **useCopyToClipboard**:
+  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useCopyToClipboard/useCopyToClipboard.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useCopyToClipboard.md)
+
+  ```jsx
+  import useCopyToClipboard from "./useCopyToClipBoard";
+  export default function App() {
+    const [copied, copy] = useCopyToClipboard("Hello World");
+    return (
+      <div>
+        <p>{copied ? "Copied!" : "Copy to clipboard"}</p>
+        <button onClick={copy}>Copy</button>
+      </div>
+    );
+  }
   ```
