@@ -143,3 +143,22 @@ custom react hooks for better performance and faster development
           );
         }
         ```
+
+        - **useSessionStorage**:
+          [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useSessionStorage/useSessionStorage.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useSessionStorage.md)
+
+          ```jsx
+          import useSessionStorage from "./useSessionStorage";
+
+          export default function App() {
+            const [value, setValue] = useSessionStorage("my-key", "my-value");
+            return (
+              <div>
+                <p>{value}</p>
+                <button onClick={() => setValue("my-new-value")}>
+                  Change Value
+                </button>
+              </div>
+            );
+          }
+          ```
