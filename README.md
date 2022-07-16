@@ -125,3 +125,21 @@ custom react hooks for better performance and faster development
         );
       }
       ```
+
+      - **useLocalStorage**:
+        [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useLocalStorage/useLocalStorage.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useLocalStorage.md)
+
+        ```jsx
+        import useLocalStorage from "./useLocalStorage";
+        export default function App() {
+          const [value, setValue] = useLocalStorage("my-key", "my-value");
+          return (
+            <div>
+              <p>{value}</p>
+              <button onClick={() => setValue("my-new-value")}>
+                Change Value
+              </button>
+            </div>
+          );
+        }
+        ```
