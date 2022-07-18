@@ -175,3 +175,19 @@ custom react hooks for better performance and faster development
     );
   }
   ```
+
+- **useEventListener**:
+  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useEventListener/useEventListener.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useEventListener.md)
+
+  ```jsx
+  import useEventListener from "./useEventListener";
+
+  export default function App() {
+    const [key, setKey] = useState("");
+    useEventListener("keydown", (e) => {
+      setKey(e.key);
+    });
+
+    return <div>Last Key: {key}</div>;
+  }
+  ```
