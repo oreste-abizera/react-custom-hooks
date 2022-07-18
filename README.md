@@ -242,3 +242,16 @@ custom react hooks for better performance and faster development
     );
   }
   ```
+
+- **useOnlineStatus**:
+  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useOnlineStatus/useOnlineStatus.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useOnlineStatus.md)
+
+  ```jsx
+  import useOnlineStatus from "./useOnlineStatus";
+
+  export default function App() {
+    const { online } = useOnlineStatus();
+
+    return <div>{online ? "Online" : "Offline"}</div>;
+  }
+  ```
