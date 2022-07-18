@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useEffectOnce from "./useEffectOnce";
 
-export default function EffectOnceComponent() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   useEffectOnce(() => alert("Hi"));

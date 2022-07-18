@@ -7,7 +7,7 @@ Handle effects that only run once. This is useful for effects that only need to 
 ```jsx
 import useEffectOnce from "./useEffectOnce";
 
-export default function EffectOnceComponent() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   useEffectOnce(() => alert("Hi"));

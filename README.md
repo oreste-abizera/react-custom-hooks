@@ -262,7 +262,7 @@ custom react hooks for better performance and faster development
   ```jsx
   import useEffectOnce from "./useEffectOnce";
 
-  export default function EffectOnceComponent() {
+  export default function App() {
     const [count, setCount] = useState(0);
 
     useEffectOnce(() => alert("Hi"));
@@ -272,6 +272,32 @@ custom react hooks for better performance and faster development
         <div>{count}</div>
         <button onClick={() => setCount((c) => c + 1)}>Increment</button>
       </>
+    );
+  }
+  ```
+
+- **useLongPress**:
+  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useLongPress/useLongPress.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useLongPress.md)
+
+  ```jsx
+  import useLongPress from "./useLongPress";
+
+  export default function App() {
+    const elementRef = useRef();
+    useLongPress(elementRef, () => alert("Long Press"));
+
+    return (
+      <div
+        ref={elementRef}
+        style={{
+          backgroundColor: "red",
+          width: "100px",
+          height: "100px",
+          position: "absolute",
+          top: "calc(50% - 50px)",
+          left: "calc(50% - 50px)",
+        }}
+      />
     );
   }
   ```
