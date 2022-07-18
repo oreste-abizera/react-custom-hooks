@@ -154,3 +154,24 @@ custom react hooks for better performance and faster development
     );
   }
   ```
+
+- **useTimeout**:
+  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useTimeout/useTimeout.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useTimeout.md)
+
+  ```jsx
+  import useTimeout from "./useTimeout";
+
+  export default function App() {
+    const [count, setCount] = useState(10);
+    const { clear, reset } = useTimeout(() => setCount(0), 1000);
+
+    return (
+      <div>
+        <div>{count}</div>
+        <button onClick={() => setCount((c) => c + 1)}>Increment</button>
+        <button onClick={clear}>Clear Timeout</button>
+        <button onClick={reset}>Reset Timeout</button>
+      </div>
+    );
+  }
+  ```
