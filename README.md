@@ -218,3 +218,27 @@ custom react hooks for better performance and faster development
     );
   }
   ```
+
+- **usePrevious**:
+  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/usePrevious/usePrevious.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/usePrevious.md)
+
+  ```jsx
+  export default function App() {
+    const [count, setCount] = useState(0);
+    const [name, setName] = useState("Kyle");
+    const previousCount = usePrevious(count);
+
+    return (
+      <div>
+        <div>
+          {count} - {previousCount}
+        </div>
+        <div>{name}</div>
+        <button onClick={() => setCount((currentCount) => currentCount + 1)}>
+          Increment
+        </button>
+        <button onClick={() => setName("John")}>Change Name</button>
+      </div>
+    );
+  }
+  ```
