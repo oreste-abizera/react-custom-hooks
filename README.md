@@ -90,20 +90,18 @@ custom react hooks for better performance and faster development
 - **useToggle**:
   [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useToggle/useToggle.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useToggle.md)
 
-  ````jsx
+  ```jsx
   import useToggle from "./useToggle";
   export default function App() {
-  const [toggle, setToggle] = useToggle(false);
-  return (
-  <div>
-  <p>{toggle ? "On" : "Off"}</p>
-  <button onClick={() => setToggle(!toggle)}>Toggle</button>
-  </div>
-  );
+    const [toggle, setToggle] = useToggle(false);
+    return (
+      <div>
+        <p>{toggle ? "On" : "Off"}</p>
+        <button onClick={() => setToggle(!toggle)}>Toggle</button>
+      </div>
+    );
   }
   ```
-
-  ````
 
 - **usePagination**:
   [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/usePagination/usePagination.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/usePagination.md)
