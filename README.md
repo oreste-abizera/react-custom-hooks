@@ -255,3 +255,23 @@ custom react hooks for better performance and faster development
     return <div>{online ? "Online" : "Offline"}</div>;
   }
   ```
+
+- **useEffectOnce**:
+  [src](https://github.com/oreste-abizera/react-custom-hooks/blob/main/src/hooks/useEffectOnce/useEffectOnce.jsx) / [doc](https://github.com/oreste-abizera/react-custom-hooks/blob/main/docs/useEffectOnce.md)
+
+  ```jsx
+  import useEffectOnce from "./useEffectOnce";
+
+  export default function EffectOnceComponent() {
+    const [count, setCount] = useState(0);
+
+    useEffectOnce(() => alert("Hi"));
+
+    return (
+      <>
+        <div>{count}</div>
+        <button onClick={() => setCount((c) => c + 1)}>Increment</button>
+      </>
+    );
+  }
+  ```
